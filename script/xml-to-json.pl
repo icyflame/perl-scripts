@@ -1,4 +1,5 @@
 use strict;
+binmode STDOUT, ":utf8";
 use warnings;
 
 use XML::Simple;
