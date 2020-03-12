@@ -84,8 +84,8 @@ my @timezones = (
 my $tb = Text::Table->new( "", "" );
 
 foreach my $key (@timezones) {
-    my $timezone = %{$key}{tz};
-    my $display = %{$key}{display};
+    my $timezone = $key->{tz};
+    my $display = $key->{display};
     $dt->set_time_zone($timezone);
     $tb->add($display, $dt->format_cldr(DATE_FORMAT))
 }
